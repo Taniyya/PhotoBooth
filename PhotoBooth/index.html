@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Realistic Photo Booth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📸 Retro Photo Booth</h1>
+
+    <div class="controls">
+      <label for="mode">Mode:</label>
+      <select id="mode">
+        <option value="single">Single Photo</option>
+        <option value="strip">Photo Strip</option>
+      </select>
+
+      <label for="filter">Filter:</label>
+      <select id="filter">
+        <option value="none">None</option>
+        <option value="grayscale(100%)">Grayscale</option>
+        <option value="sepia(100%)">Sepia</option>
+        <option value="invert(100%)">Invert</option>
+      </select>
+    </div>
+
+    <div class="camera-box">
+      <video id="video" autoplay></video>
+      <canvas id="canvas" width="640" height="1440" hidden></canvas>
+      <div id="countdown"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="start" class="btn">Take Photo</button>
+      <button id="retake" class="btn secondary" hidden>Retake</button>
+      <a id="download" class="btn download" hidden download="photo.png">Download</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
